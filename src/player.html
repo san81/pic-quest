@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Welcome to the Game, Player!</title>
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/play_pause_button.css">
+
+    <script src="https://cdn.pubnub.com/sdk/javascript/pubnub.7.4.2.js"></script>
+    <script type="text/javascript" src="js/setup_pubnub.js"></script>
+    <script type="text/javascript" src="js/player.js"></script>
+    <script type="text/javascript">
+        // run after page is loaded
+        window.onload = setupPubNub;
+    </script>
+    
+</head>
+<body>
+   
+    
+    <div class="container">
+        <input type="text" 
+            placeholder="Enter Your Name!" 
+            id="nameInput" 
+            maxlength="20" 
+            autocomplete="off" 
+            autofocus="true" style="font-size: x-large;"/>
+        <input type="button" title="Join" value="Join" onclick="registerPlayer()"/>
+        <header>
+            Guess the Image Below
+            <div class="botón" id="play_pause_button" onclick="pressTheBuzzer()">
+                <div class="fondo" x="0" y="0" width="200" height="200"></div>
+                <div class="icono" width="200" height="200">
+                  <div class="parte izquierda" x="0" y="0" width="200" height="200" fill="#fff"></div>
+                  <div class="parte derecha" x="0" y="0" width="200" height="200" fill="#fff"></div>
+                </div>
+                <div class="puntero"></div>
+            </div>
+        </header>
+        
+        <footer>
+            
+        </footer>
+    </div>
+</body>
+</html>

@@ -1,0 +1,76 @@
+/**
+ * CSS from the Layout Generator/Tool
+ */
+ .container {
+    display: flex;
+    flex-direction: column;
+}
+
+.container__main {
+    /* Take the remaining height */
+    flex-grow: 1;
+
+    /* Layout the left sidebar, main content and right sidebar */
+    display: flex;
+    flex-direction: row;
+}
+
+.container__left {
+    width: 25%;
+}
+
+.container__middle {
+    /* Take the remaining width */
+    flex-grow: 1;
+}
+
+.container__right {
+    width: 20%;
+}
+
+/**
+ * Custom CSS added here 
+ */
+body {
+  font-family: "Raleway", sans-serif;
+  padding: 1rem;
+}
+.container {
+  height: calc(100vh - 3rem);
+  gap: 1rem;
+}
+.container header, 
+.container footer,
+.container__main > * {
+  display: grid;
+  padding: 1rem;
+  border-radius: 5px;
+  font-size: 1rem;
+  letter-spacing: 0.05rem;
+  box-shadow: 0 1px 6px 0 hsl(0, 0%, 0%, 20%);
+}
+header, footer {
+  color: hsl(22, 78%, 26%);
+  background-color: hsl(48, 96%, 89%);
+}
+aside, nav {
+  color: hsl(177, 51%, 23%);
+  background-color: hsl(177,51%, 82%);
+}
+article {
+  color: hsl(177, 51%, 23%);
+  background-color: hsl(177, 51%, 93%);
+}
+.container__main {
+  gap: 1rem;  
+  min-height: 185px;
+}
+
+@media (max-width: 600px) {
+  .container__main {
+    flex-wrap: wrap;
+  }
+  .container__left, .container__right {
+    width: 100%;
+  }
+}

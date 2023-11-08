@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Welcome to the Game!</title>
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/play_pause_button.css">
+    <link rel="stylesheet" href="css/image_blur.css">
+    <script src="https://cdn.pubnub.com/sdk/javascript/pubnub.7.4.2.js"></script>
+    <script type="text/javascript" src="js/setup_pubnub.js"></script>
+    <script type="text/javascript" src="js/guessing_game.js"></script>
+    <script type="text/javascript">
+        // run after page is loaded
+        console.log("incokving setup Pubnuub");
+        window.onload = setupPubNub;
+    </script>
+</head>
+<body onload="onPageLoad()">
+   
+
+    <div class="container">
+        <header>
+            Guess the Image Below
+            <div class="botón" id="play_pause_button" onclick="playPause()">
+                <div class="fondo" x="0" y="0" width="200" height="200"></div>
+                <div class="icono" width="200" height="200">
+                  <div class="parte izquierda" x="0" y="0" width="200" height="200" fill="#fff"></div>
+                  <div class="parte derecha" x="0" y="0" width="200" height="200" fill="#fff"></div>
+                </div>
+                <div class="puntero"></div>
+              </div>
+              <div id="countdown" class="countdown">100</div>
+        </header>
+        <main class="container__main">
+            <!-- Left sidebar -->
+            <aside class="container__left">
+                Current Players
+                <div id="users">
+
+                </div>
+
+            </aside>
+    
+            <!-- Main content -->
+            <article class="container__middle">
+                <div class="bg-image" id="img-displayed">image</div>
+            </article>
+            
+                
+            </nav>
+        </main>
+        <footer>
+            <div id="status-message"></div>
+        </footer>
+    </div>
+</body>
+</html>

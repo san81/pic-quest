@@ -1,0 +1,39 @@
+
+
+.bg-image {
+    /* The image used */
+    background-image: url("../images/demo-example.png");
+    
+    
+    /* Full height */
+    height: 100%; 
+    filter: blur(0px);
+    -webkit-filter: blur(0px);
+    
+    
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    animation: imgblur 10s;
+  }
+
+@keyframes imgblur {
+    0% { 
+    /* Add the blur effect */
+    filter: blur(100px);
+    -webkit-filter: blur(100px);
+    }
+    
+    100% {
+    filter: blur(0px);
+    -webkit-filter: blur(0px);
+    }
+}
+
+.paused{
+    -webkit-animation-play-state:paused;
+    -moz-animation-play-state:paused;
+    -o-animation-play-state:paused; 
+    animation-play-state:paused;
+}
